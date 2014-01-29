@@ -17,7 +17,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int border_color=0x7f010006;
+        public static final int border_color=0x7f010001;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -27,32 +27,32 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int border_width=0x7f010005;
+        public static final int border_width=0x7f010000;
         /**  Layout to build a Header. Default value is @layout/base_header_layout 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int card_header_layout_resourceID=0x7f010002;
+        public static final int card_header_layout_resourceID=0x7f010004;
         /**  Layout to build a card. Default value is  @layout/card_base_layout 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int card_layout_resourceID=0x7f010000;
+        public static final int card_layout_resourceID=0x7f010002;
         /**  Layout to build a shadow. Default value is @layout/base_shadow_layout 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int card_shadow_layout_resourceID=0x7f010001;
+        public static final int card_shadow_layout_resourceID=0x7f010003;
         /**  Layout to build a Thumbnail. Default value is @layout/base_thumbnail_layout 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int card_thumbnail_layout_resourceID=0x7f010003;
+        public static final int card_thumbnail_layout_resourceID=0x7f010005;
         /**  Layout used by card in a ListView. Default value is  @layout/list_card_layout 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int list_card_layout_resourceID=0x7f010004;
+        public static final int list_card_layout_resourceID=0x7f010006;
     }
     public static final class color {
         public static final int card_activated=0x7f040006;
@@ -164,59 +164,63 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_menu_overflow_card_rounded_dark_pressed=0x7f02000f;
         public static final int ic_undobar_undo=0x7f020010;
         public static final int pressed_background_card=0x7f020011;
-        public static final int undobar=0x7f020012;
-        public static final int undobar_button_focused=0x7f020013;
-        public static final int undobar_button_pressed=0x7f020014;
-        public static final int undobar_divider=0x7f020015;
+        public static final int profile_pic_test=0x7f020012;
+        public static final int undobar=0x7f020013;
+        public static final int undobar_button_focused=0x7f020014;
+        public static final int undobar_button_pressed=0x7f020015;
+        public static final int undobar_divider=0x7f020016;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0019;
-        public static final int card_content_expand_layout=0x7f0b000b;
-        public static final int card_expand_inner_simple_title=0x7f0b0012;
-        public static final int card_header_button_expand=0x7f0b0003;
-        public static final int card_header_button_frame=0x7f0b0001;
-        public static final int card_header_button_other=0x7f0b0004;
-        public static final int card_header_button_overflow=0x7f0b0002;
-        public static final int card_header_inner_frame=0x7f0b0000;
-        public static final int card_header_inner_simple_title=0x7f0b0013;
-        public static final int card_header_layout=0x7f0b000a;
-        public static final int card_main_content_layout=0x7f0b0007;
-        public static final int card_main_inner_simple_title=0x7f0b0014;
-        public static final int card_main_layout=0x7f0b0009;
-        public static final int card_overlap=0x7f0b000c;
-        public static final int card_shadow_layout=0x7f0b0008;
-        public static final int card_shadow_view=0x7f0b0005;
-        public static final int card_thumb_and_content_layout=0x7f0b000d;
-        public static final int card_thumbnail_image=0x7f0b0006;
-        public static final int card_thumbnail_layout=0x7f0b000e;
-        public static final int list_cardId=0x7f0b0015;
-        public static final int list_card_undobar=0x7f0b0016;
-        public static final int list_card_undobar_button=0x7f0b0018;
-        public static final int list_card_undobar_message=0x7f0b0017;
-        public static final int undobar=0x7f0b000f;
-        public static final int undobar_button=0x7f0b0011;
-        public static final int undobar_message=0x7f0b0010;
+        public static final int TopLayout=0x7f0b0000;
+        public static final int action_settings=0x7f0b001b;
+        public static final int card_content_expand_layout=0x7f0b000d;
+        public static final int card_expand_inner_simple_title=0x7f0b0014;
+        public static final int card_header_button_expand=0x7f0b0005;
+        public static final int card_header_button_frame=0x7f0b0003;
+        public static final int card_header_button_other=0x7f0b0006;
+        public static final int card_header_button_overflow=0x7f0b0004;
+        public static final int card_header_inner_frame=0x7f0b0002;
+        public static final int card_header_inner_simple_title=0x7f0b0015;
+        public static final int card_header_layout=0x7f0b000c;
+        public static final int card_main_content_layout=0x7f0b0009;
+        public static final int card_main_inner_simple_title=0x7f0b0016;
+        public static final int card_main_layout=0x7f0b000b;
+        public static final int card_overlap=0x7f0b000e;
+        public static final int card_shadow_layout=0x7f0b000a;
+        public static final int card_shadow_view=0x7f0b0007;
+        public static final int card_thumb_and_content_layout=0x7f0b000f;
+        public static final int card_thumbnail_image=0x7f0b0008;
+        public static final int card_thumbnail_layout=0x7f0b0010;
+        public static final int list_cardId=0x7f0b0017;
+        public static final int list_card_undobar=0x7f0b0018;
+        public static final int list_card_undobar_button=0x7f0b001a;
+        public static final int list_card_undobar_message=0x7f0b0019;
+        public static final int profile_image=0x7f0b0001;
+        public static final int undobar=0x7f0b0011;
+        public static final int undobar_button=0x7f0b0013;
+        public static final int undobar_message=0x7f0b0012;
     }
     public static final class integer {
         public static final int list_card_undobar_hide_delay=0x7f060000;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int base_header_layout=0x7f030001;
-        public static final int base_shadow_layout=0x7f030002;
-        public static final int base_thumbnail_layout=0x7f030003;
-        public static final int card_base_layout=0x7f030004;
-        public static final int card_layout=0x7f030005;
-        public static final int card_overlay_layout=0x7f030006;
-        public static final int card_thumbnail_layout=0x7f030007;
-        public static final int card_thumbnail_overlay_layout=0x7f030008;
-        public static final int card_undo_layout=0x7f030009;
-        public static final int inner_base_expand=0x7f03000a;
-        public static final int inner_base_header=0x7f03000b;
-        public static final int inner_base_main=0x7f03000c;
-        public static final int list_card_layout=0x7f03000d;
-        public static final int list_card_thumbnail_layout=0x7f03000e;
-        public static final int list_card_undo_message=0x7f03000f;
+        public static final int activity_event=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int base_header_layout=0x7f030002;
+        public static final int base_shadow_layout=0x7f030003;
+        public static final int base_thumbnail_layout=0x7f030004;
+        public static final int card_base_layout=0x7f030005;
+        public static final int card_layout=0x7f030006;
+        public static final int card_overlay_layout=0x7f030007;
+        public static final int card_thumbnail_layout=0x7f030008;
+        public static final int card_thumbnail_overlay_layout=0x7f030009;
+        public static final int card_undo_layout=0x7f03000a;
+        public static final int inner_base_expand=0x7f03000b;
+        public static final int inner_base_header=0x7f03000c;
+        public static final int inner_base_main=0x7f03000d;
+        public static final int list_card_layout=0x7f03000e;
+        public static final int list_card_thumbnail_layout=0x7f03000f;
+        public static final int list_card_undo_message=0x7f030010;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
@@ -354,7 +358,7 @@ Style for simple title header inner view
            @see #CircleImageView_border_width
          */
         public static final int[] CircleImageView = {
-            0x7f010005, 0x7f010006
+            0x7f010000, 0x7f010001
         };
         /**
           <p>This symbol is the offset where the {@link com.pjwstk.hacksched.R.attr#border_color}
@@ -406,8 +410,8 @@ containing a value of this type.
            @see #card_options_list_card_layout_resourceID
          */
         public static final int[] card_options = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010006
         };
         /**
           <p>

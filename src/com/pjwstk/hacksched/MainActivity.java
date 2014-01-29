@@ -1,23 +1,33 @@
 package com.pjwstk.hacksched;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
+
 import com.parse.Parse;
-import com.parse.ParseAnalytics;
-import com.parse.ParseObject;
 import com.parse.PushService;
+import com.pjwstk.hacksched.ui.ActivityEvent;
 
 public class MainActivity extends Activity {
+	protected GlobalState mApplication;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//IMPORTANT!! This is out app key, that is why when compiling we need to use right mouse click on project -> Android Tools -> Export Signed Applica(...)
-		Parse.initialize(this, "9UOTweJKonKjKREuVMHCezDw1Lpm1iJRf1m3P9X8", "XM0i1UWiEZsESeJ7kieX7q7KDmGXlNZmsQIUPRSy");
+		mApplication = ((GlobalState)this.getApplication());
 		
 		PushService.setDefaultPushCallback(this, MainActivity.class);
+		
+		
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		Intent eventTest = new Intent(this, ActivityEvent.class);
+	    startActivity(eventTest);
 		
 	}
 
