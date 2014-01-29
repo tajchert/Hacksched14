@@ -1,4 +1,4 @@
-#Hacksched14
+Hacksched14
 ===========
 
 Android App for hackathon with DICE+ on PJWSTK - 2014.
