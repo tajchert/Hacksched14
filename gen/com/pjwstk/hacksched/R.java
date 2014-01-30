@@ -55,6 +55,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int list_card_layout_resourceID=0x7f010006;
     }
     public static final class color {
+        public static final int accent_1=0x7f04000e;
+        public static final int all_track_color=0x7f04000f;
+        public static final int body_text_1=0x7f040007;
+        public static final int body_text_1_inverse=0x7f04000b;
+        public static final int body_text_1_positive=0x7f04000d;
+        public static final int body_text_2=0x7f040008;
+        public static final int body_text_2_inverse=0x7f04000c;
+        public static final int body_text_3=0x7f040009;
+        public static final int body_text_disabled=0x7f04000a;
         public static final int card_activated=0x7f040006;
         /**  Card Color 
          */
@@ -66,6 +75,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int card_pressed=0x7f040005;
         public static final int card_text_color_header=0x7f040003;
+        public static final int dark_divider=0x7f040017;
+        public static final int home_pane_header=0x7f040010;
+        public static final int map_floorselect_active=0x7f040015;
+        public static final int map_floorselect_inactive=0x7f040016;
+        public static final int map_info_1=0x7f040013;
+        public static final int map_info_2=0x7f040014;
+        public static final int plus_color=0x7f04001a;
+        public static final int plus_empty_image_background_color=0x7f04001c;
+        public static final int plus_media_item_tint=0x7f04001b;
+        public static final int plus_stream_media_background=0x7f040019;
+        /**  Google+ 
+         */
+        public static final int plus_stream_spacer_color=0x7f040018;
+        public static final int sliding_pane_content_fade=0x7f040011;
+        public static final int sticky_block_background=0x7f040012;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -147,58 +171,86 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class drawable {
         public static final int activated_background_card=0x7f020000;
-        public static final int card_background=0x7f020001;
-        public static final int card_menu_button_expand=0x7f020002;
-        public static final int card_menu_button_overflow=0x7f020003;
-        public static final int card_menu_button_rounded_overflow=0x7f020004;
-        public static final int card_multichoice_selector=0x7f020005;
-        public static final int card_selector=0x7f020006;
-        public static final int card_shadow=0x7f020007;
-        public static final int card_undo=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int ic_menu_expand_card_dark_normal=0x7f02000a;
-        public static final int ic_menu_expand_card_dark_pressed=0x7f02000b;
-        public static final int ic_menu_overflow_card_dark_normal=0x7f02000c;
-        public static final int ic_menu_overflow_card_dark_pressed=0x7f02000d;
-        public static final int ic_menu_overflow_card_rounded_dark_normal=0x7f02000e;
-        public static final int ic_menu_overflow_card_rounded_dark_pressed=0x7f02000f;
-        public static final int ic_undobar_undo=0x7f020010;
-        public static final int pressed_background_card=0x7f020011;
-        public static final int profile_pic_test=0x7f020012;
-        public static final int undobar=0x7f020013;
-        public static final int undobar_button_focused=0x7f020014;
-        public static final int undobar_button_pressed=0x7f020015;
-        public static final int undobar_divider=0x7f020016;
+        public static final int add_schedule_button_background=0x7f020001;
+        public static final int add_schedule_button_background_base=0x7f020002;
+        public static final int add_schedule_button_checked_default=0x7f020003;
+        public static final int add_schedule_button_checked_focused=0x7f020004;
+        public static final int add_schedule_button_checked_pressed=0x7f020005;
+        public static final int add_schedule_button_icon_checked=0x7f020006;
+        public static final int add_schedule_button_icon_unchecked=0x7f020007;
+        public static final int add_schedule_button_unchecked_default=0x7f020008;
+        public static final int add_schedule_button_unchecked_focused=0x7f020009;
+        public static final int add_schedule_button_unchecked_pressed=0x7f02000a;
+        public static final int card_background=0x7f02000b;
+        public static final int card_menu_button_expand=0x7f02000c;
+        public static final int card_menu_button_overflow=0x7f02000d;
+        public static final int card_menu_button_rounded_overflow=0x7f02000e;
+        public static final int card_multichoice_selector=0x7f02000f;
+        public static final int card_selector=0x7f020010;
+        public static final int card_shadow=0x7f020011;
+        public static final int card_undo=0x7f020012;
+        public static final int ic_action_expand=0x7f020013;
+        public static final int ic_launcher=0x7f020014;
+        public static final int ic_menu_expand_card_dark_normal=0x7f020015;
+        public static final int ic_menu_expand_card_dark_pressed=0x7f020016;
+        public static final int ic_menu_overflow_card_dark_normal=0x7f020017;
+        public static final int ic_menu_overflow_card_dark_pressed=0x7f020018;
+        public static final int ic_menu_overflow_card_rounded_dark_normal=0x7f020019;
+        public static final int ic_menu_overflow_card_rounded_dark_pressed=0x7f02001a;
+        public static final int ic_undobar_undo=0x7f02001b;
+        public static final int logo_partner_dice=0x7f02001c;
+        public static final int matias_duarte=0x7f02001d;
+        public static final int pressed_background_card=0x7f02001e;
+        public static final int profile_pic_test=0x7f02001f;
+        public static final int undobar=0x7f020020;
+        public static final int undobar_button_focused=0x7f020021;
+        public static final int undobar_button_pressed=0x7f020022;
+        public static final int undobar_divider=0x7f020023;
     }
     public static final class id {
-        public static final int TopLayout=0x7f0b0000;
-        public static final int action_settings=0x7f0b001b;
-        public static final int card_content_expand_layout=0x7f0b000d;
-        public static final int card_expand_inner_simple_title=0x7f0b0014;
-        public static final int card_header_button_expand=0x7f0b0005;
-        public static final int card_header_button_frame=0x7f0b0003;
-        public static final int card_header_button_other=0x7f0b0006;
-        public static final int card_header_button_overflow=0x7f0b0004;
-        public static final int card_header_inner_frame=0x7f0b0002;
-        public static final int card_header_inner_simple_title=0x7f0b0015;
-        public static final int card_header_layout=0x7f0b000c;
-        public static final int card_main_content_layout=0x7f0b0009;
-        public static final int card_main_inner_simple_title=0x7f0b0016;
-        public static final int card_main_layout=0x7f0b000b;
-        public static final int card_overlap=0x7f0b000e;
-        public static final int card_shadow_layout=0x7f0b000a;
-        public static final int card_shadow_view=0x7f0b0007;
-        public static final int card_thumb_and_content_layout=0x7f0b000f;
-        public static final int card_thumbnail_image=0x7f0b0008;
-        public static final int card_thumbnail_layout=0x7f0b0010;
-        public static final int list_cardId=0x7f0b0017;
-        public static final int list_card_undobar=0x7f0b0018;
-        public static final int list_card_undobar_button=0x7f0b001a;
-        public static final int list_card_undobar_message=0x7f0b0019;
-        public static final int profile_image=0x7f0b0001;
-        public static final int undobar=0x7f0b0011;
-        public static final int undobar_button=0x7f0b0013;
-        public static final int undobar_message=0x7f0b0012;
+        public static final int EventTitle=0x7f0b0000;
+        public static final int TopLayout=0x7f0b0001;
+        public static final int action_settings=0x7f0b002a;
+        public static final int addScheduleTitle=0x7f0b000a;
+        public static final int addToscheduleLayout=0x7f0b0008;
+        public static final int add_schedule_button=0x7f0b0020;
+        public static final int add_schedule_icon=0x7f0b0021;
+        public static final int add_schedule_text=0x7f0b0022;
+        public static final int card_content_expand_layout=0x7f0b0019;
+        public static final int card_expand_inner_simple_title=0x7f0b0023;
+        public static final int card_header_button_expand=0x7f0b0011;
+        public static final int card_header_button_frame=0x7f0b000f;
+        public static final int card_header_button_other=0x7f0b0012;
+        public static final int card_header_button_overflow=0x7f0b0010;
+        public static final int card_header_inner_frame=0x7f0b000e;
+        public static final int card_header_inner_simple_title=0x7f0b0024;
+        public static final int card_header_layout=0x7f0b0018;
+        public static final int card_main_content_layout=0x7f0b0015;
+        public static final int card_main_inner_simple_title=0x7f0b0025;
+        public static final int card_main_layout=0x7f0b0017;
+        public static final int card_overlap=0x7f0b001a;
+        public static final int card_shadow_layout=0x7f0b0016;
+        public static final int card_shadow_view=0x7f0b0013;
+        public static final int card_thumb_and_content_layout=0x7f0b001b;
+        public static final int card_thumbnail_image=0x7f0b0014;
+        public static final int card_thumbnail_layout=0x7f0b001c;
+        public static final int eventTitleHours=0x7f0b0003;
+        public static final int expandButton=0x7f0b0006;
+        public static final int imageButton1=0x7f0b0009;
+        public static final int imageView1=0x7f0b000b;
+        public static final int list_cardId=0x7f0b0026;
+        public static final int list_card_undobar=0x7f0b0027;
+        public static final int list_card_undobar_button=0x7f0b0029;
+        public static final int list_card_undobar_message=0x7f0b0028;
+        public static final int partnerLogos=0x7f0b000d;
+        public static final int personTop=0x7f0b0005;
+        public static final int profile_image=0x7f0b0002;
+        public static final int roomNumberTop=0x7f0b0004;
+        public static final int separatorTop=0x7f0b0007;
+        public static final int textView1=0x7f0b000c;
+        public static final int undobar=0x7f0b001d;
+        public static final int undobar_button=0x7f0b001f;
+        public static final int undobar_message=0x7f0b001e;
     }
     public static final class integer {
         public static final int list_card_undobar_hide_delay=0x7f060000;
@@ -215,12 +267,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int card_thumbnail_layout=0x7f030008;
         public static final int card_thumbnail_overlay_layout=0x7f030009;
         public static final int card_undo_layout=0x7f03000a;
-        public static final int inner_base_expand=0x7f03000b;
-        public static final int inner_base_header=0x7f03000c;
-        public static final int inner_base_main=0x7f03000d;
-        public static final int list_card_layout=0x7f03000e;
-        public static final int list_card_thumbnail_layout=0x7f03000f;
-        public static final int list_card_undo_message=0x7f030010;
+        public static final int include_add_to_schedule_button=0x7f03000b;
+        public static final int inner_base_expand=0x7f03000c;
+        public static final int inner_base_header=0x7f03000d;
+        public static final int inner_base_main=0x7f03000e;
+        public static final int list_card_layout=0x7f03000f;
+        public static final int list_card_thumbnail_layout=0x7f030010;
+        public static final int list_card_undo_message=0x7f030011;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
