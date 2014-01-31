@@ -19,17 +19,15 @@ import android.util.Log;
 import com.pjwstk.hacksched.utils.Constants;
 
 public class PushReceiver extends BroadcastReceiver {
-	//To call it use ex. {"action":"com.pjwstk.hacksched.UPDATE_STATUS","notif": true,"title": "Hack A Dice", "content":"You can win awesome prizes!"}
+	//To call it use ex. {"action":"com.pjwstk.hacksched.UPDATE_STATUS","notif": true,"notiftitle": "Hack A Dice", "notifcontent":"You can win awesome prizes!", "class":"com.pjwstk.hacksched.ui.ActivityEvent"}
 	 
 	  @Override
 	  public void onReceive(Context context, Intent intent) {
 	    try {
-	    	Log.d(Constants.TAG, "RECEIVE");
-	      String action = intent.getAction();
-	      String channel = intent.getExtras().getString("Channel");
+	    	Log.d(Constants.TAG, "RECEIVED");
+	      //String action = intent.getAction();
+	      //String channel = intent.getExtras().getString("Channel");
 	      JSONObject json = new JSONObject(intent.getExtras().getString("com.parse.Data"));
-	 
-	      Log.d(Constants.TAG, "got action " + action + " on channel " + channel + " with:");
 	      
 	      if(json.getBoolean("notif")){
 	    	  makeNotification(json);
@@ -55,11 +53,22 @@ public class PushReceiver extends BroadcastReceiver {
 		String title = "Title";
 		String content = "Content";
 		try {
-			title = json.getString("title");
-			content = json.getString("content");
+			title = json.getString("notiftitle");
+			content = json.getString("notifcontent");
 		} catch (JSONException e) {
 			Log.d(Constants.TAG, "JSONException: " + e.getMessage());
 		}
+		@SuppressWarnings("rawtypes")
+		Class classToLaunch;
+		classToLaunch = MainActivity.class;
+		try {
+			classToLaunch = Class.forName(json.getString("class"));
+		} catch (JSONException e) {
+			Log.d(Constants.TAG, "Class is default one.");
+		} catch (ClassNotFoundException e) {
+			Log.d(Constants.TAG, "Class is default one.");
+		}
+		
 		long[] vibraPattern = { 0, 500, 250, 500 };
 
 		NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(GlobalState.context)
@@ -72,11 +81,11 @@ public class PushReceiver extends BroadcastReceiver {
 				.setVibrate(vibraPattern)
 				;
 		
-		Intent resultIntent = new Intent(GlobalState.context,MainActivity.class);
+		Intent resultIntent = new Intent(GlobalState.context, classToLaunch);
 
 		TaskStackBuilder stackBuilder = TaskStackBuilder
 				.create(GlobalState.context);
-		stackBuilder.addParentStack(MainActivity.class);
+		stackBuilder.addParentStack(classToLaunch);
 		stackBuilder.addNextIntent(resultIntent);
 		PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,
 				PendingIntent.FLAG_UPDATE_CURRENT);
@@ -89,30 +98,42 @@ public class PushReceiver extends BroadcastReceiver {
 	}
 
 	@SuppressWarnings("deprecation")
-	private void makeNotification(int depend) {
+	private void makeNotificationOld(JSONObject json) {
+		String title = "Title";
+		String content = "Content";
+		try {
+			title = json.getString("notiftitle");
+			content = json.getString("notifcontent");
+		} catch (JSONException e) {
+			Log.d(Constants.TAG, "JSONException: " + e.getMessage());
+		}
+		
+		@SuppressWarnings("rawtypes")
+		Class classToLaunch;
+		classToLaunch = MainActivity.class;
+		try {
+			classToLaunch = Class.forName(json.getString("class"));
+		} catch (JSONException e) {
+			Log.d(Constants.TAG, "Class is default one.");
+		} catch (ClassNotFoundException e) {
+			Log.d(Constants.TAG, "Class is default one.");
+		}
+		
+		
 		NotificationManager nm = (NotificationManager) GlobalState.context
-				.getApplicationContext().getSystemService(
-						GlobalState.context.getApplicationContext().NOTIFICATION_SERVICE);
+				.getApplicationContext().getSystemService(GlobalState.context.getApplicationContext().NOTIFICATION_SERVICE);
 		
 		int icon = R.drawable.ic_launcher;
-		
-		CharSequence tickerText = GlobalState.context.getApplicationContext().getString(
-				R.string.app_name);
+		CharSequence tickerText = GlobalState.context.getApplicationContext().getString(R.string.app_name);
 		long when = System.currentTimeMillis();
-		Intent notificationIntent = new Intent(GlobalState.context.getApplicationContext(),
-				MainActivity.class);
+		Intent notificationIntent = new Intent(GlobalState.context.getApplicationContext(), classToLaunch);
 		PendingIntent contentIntent = PendingIntent.getActivity(
 				GlobalState.context.getApplicationContext(), 0, notificationIntent, 0);
 
 		Notification notification = new Notification(icon, tickerText, when);
-		notification.flags = Notification.DEFAULT_LIGHTS
-				| Notification.FLAG_AUTO_CANCEL
-				| Notification.FLAG_ONLY_ALERT_ONCE;
+		notification.flags = Notification.FLAG_AUTO_CANCEL | Notification.DEFAULT_ALL | Notification.FLAG_ONLY_ALERT_ONCE;
 
-		CharSequence contentTitle = GlobalState.context.getApplicationContext().getString(
-				R.string.app_name);
-		notification.setLatestEventInfo(GlobalState.context.getApplicationContext(),
-				contentTitle, "CONTENT", contentIntent);
+		notification.setLatestEventInfo(GlobalState.context.getApplicationContext(), title, content, contentIntent);
 
 		nm.notify(Constants.NOTIFICATION_BASE_ID, notification);
 	}

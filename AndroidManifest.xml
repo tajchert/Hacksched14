@@ -76,9 +76,9 @@
 		  </intent-filter>
 		</receiver>
 		<receiver android:name="com.pjwstk.hacksched.PushReceiver">
-		<intent-filter>
-		  <action android:name="com.pjwstk.hacksched.UPDATE_STATUS" />
-		</intent-filter>
+			<intent-filter>
+			  <action android:name="com.pjwstk.hacksched.UPDATE_STATUS" />
+			</intent-filter>
 		</receiver>
         <!--END PARSE PUSHes -->
 

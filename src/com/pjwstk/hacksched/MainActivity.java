@@ -21,10 +21,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		mApplication = ((GlobalState)this.getApplication());
 		
-		//PushService.setDefaultPushCallback(this, MainActivity.class);
-		//PushService.subscribe(this, "Channel", MainActivity.class);
-		
 		PushService.setDefaultPushCallback(this, MainActivity.class);
+		//PushService.subscribe(this, "Channel", MainActivity.class);
 		//PushService.subscribe(this, "MAIN", MainActivity.class);
 		Log.d(Constants.TAG, "MAIN");
 	}
@@ -34,6 +32,7 @@ public class MainActivity extends Activity {
 		super.onResume();
 		Intent eventTest = new Intent(this, ActivityEvent.class);
 	    startActivity(eventTest);
+	    this.finish();
 		
 	}
 
