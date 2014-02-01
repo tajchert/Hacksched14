@@ -1,7 +1,10 @@
 package com.pjwstk.hacksched.ui;
 
+import java.util.Locale;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -44,9 +47,22 @@ public class ActivityContact extends Activity {
 	    Button buttonMap = (Button) findViewById(R.id.buttonMap);
 	    buttonMap.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				startActivity(new Intent(ActivityContact.this, ActivityFullMap.class));
+				//startActivity(new Intent(ActivityContact.this, ActivityFullMap.class));
+				String uri = String.format(Locale.ENGLISH, "geo:%f,%f?q=%f,%f(Hack+A+Dice)", Constants.PJWSTK_LOCATION_LAT, Constants.PJWSTK_LOCATION_LNG, Constants.PJWSTK_LOCATION_LAT, Constants.PJWSTK_LOCATION_LNG);
+				Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+				startActivity(intent);
 			}
 		});
+	    Button buttonnavigateTo = (Button) findViewById(R.id.buttonnavigateTo);
+	    buttonnavigateTo.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				 Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?daddr=52.2237244,20.9941623"));
+				 intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+				 startActivity(intent);
+			}
+		});
+	    
+	   
 	  }
 
 }
