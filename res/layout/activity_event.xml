@@ -45,10 +45,11 @@
             android:layout_below="@+id/EventTitle"
             android:layout_toRightOf="@+id/profile_image"
             android:fontFamily="sans-serif-regular"
+            android:textStyle="bold"
             android:gravity="center"
             android:text="Matias Duarte"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#547EC0" />
+            android:textColor="#69A1FE" />
 
         <RelativeLayout
             android:id="@+id/layoutPlaceAndDate"

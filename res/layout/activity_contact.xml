@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityContact" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                class="com.google.android.gms.maps.MapFragment" />
+
+            <Button
+                android:id="@+id/buttonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/map"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/textViewAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/map"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text="Address"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#606060" />
+
+            <View
+                android:id="@+id/separatorAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/textViewAddressTitle"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:background="#999999" />
+
+            <TextView
+                android:id="@+id/eventAddressContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewAddressTitle"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/separatorAddress"
+                android:layout_marginRight="5dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center|top"
+                android:text="Warszawa\nul. Koszykowa 86"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textViewEventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/eventAddressContent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="About Event"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#606060" />
+
+            <View
+                android:id="@+id/separatorEventInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/textViewEventTitle"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:background="#999999" />
+
+            <ImageView
+                android:id="@+id/imageViewEventLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/separatorEventInfo"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/event_logo" />
+
+            <TextView
+                android:id="@+id/eventInfoContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewEventTitle"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageViewEventLogo"
+                android:layout_marginRight="5dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left|top"
+                android:text="&apos;Hack A Dice&apos; event is offices parties lasting outward nothing age few resolve. Impression to discretion understood to we interested he excellence. Him remarkably use projection collecting. Going about eat forty world has round miles. Attention affection at my preferred offending shameless me if agreeable. Life lain held calm and true neat she. Much feet each so went no from. Truth began maids linen an mr to after. "
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textViewPartnersTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/eventInfoContent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Partners"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#606060" />
+
+            <View
+                android:id="@+id/separatorPartners"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/textViewPartnersTitle"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:background="#999999" />
+
+            <RelativeLayout
+                android:id="@+id/PartnersLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separatorPartners" >
+
+                <ImageView
+                    android:id="@+id/imageViewDiceLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/logo_partner_dice" />
+
+                <TextView
+                    android:id="@+id/textViewDiceContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/imageViewDiceLogo"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:text="DICE"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#606060" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

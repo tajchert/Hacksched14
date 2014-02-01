@@ -16,6 +16,7 @@ import android.media.RingtoneManager;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.pjwstk.hacksched.ui.MainActivity;
 import com.pjwstk.hacksched.utils.Constants;
 
 public class PushReceiver extends BroadcastReceiver {

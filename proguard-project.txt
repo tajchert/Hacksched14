@@ -18,3 +18,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class com.parse.** { *; }
+-dontwarn com.google.android.gms.**
+-dontwarn com.facebook.**
+-libraryjars /libs/Parse-1.4.0.jar

@@ -10,5 +10,6 @@ package com.pjwstk.hacksched;
 public final class Manifest {
     public static final class permission {
         public static final String C2D_MESSAGE="com.pjwstk.hacksched.permission.C2D_MESSAGE";
+        public static final String MAPS_RECEIVE="com.pjwstk.hacksched.permission.MAPS_RECEIVE";
     }
 }
