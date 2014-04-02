@@ -2,7 +2,7 @@ Hacksched14
 ===========
 
 Android App for hackathon with DICE+ on PJWSTK - 2014.
-More info coming soon.
+Abandoned work, but still perfectly fine for later use for any other event. Just keep in mind that is a draft, nothing big. 
 
 
 ##External Libs
@@ -14,7 +14,5 @@ You will need import those to compile our awesome project.
 
 [**Parse**](https://parse.com/)
 
-##Authors
+##Author
 **Michał Tajchert**
-
-**Michał Wojciechowski**
